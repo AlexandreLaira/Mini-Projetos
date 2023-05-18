@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 1rem 'Poppins', sans-serif;
+}
+
+main{
+  background: #35554a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.cadastro{
+  background: #ffffff;
+  max-width: 600px;
+  width: 400px;
+  border-radius: 8px;
+  padding: 50px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 1000ms;
+}
+
+.login{
+  position: absolute;
+  background: #ffffff;
+  max-width: 600px;
+  width: 400px;
+  border-radius: 8px;
+  padding: 50px;
+  transform-style: preserve-3d;
+  transition: transform 1000ms;
+  backface-visibility: hidden;
+}
+
+.titulo-cadastro{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.itens-form{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itens-form label{
+  width: 100%;
+  align-items: left;
+}
+
+input{
+  margin-bottom: 22px;
+  border: none;
+  border-bottom: 1px solid #35554a;
+  font-size: 0.9rem;
+  width: 100%;
+  padding: 3px;
+}
+
+input::placeholder{
+  opacity: 0.3;
+  font-size: 0.8rem;
+}
+
+#senha-conf{
+  margin-bottom: 35px;
+}
+
+.cadastrar{
+  padding: 12px;
+  border-bottom: none;
+  background: #35554a;
+  border-radius: 8px;
+  color: #fff;
+  text-shadow: 1px 1px 0 #333;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 200ms;
+}
+
+.cadastrar:hover{
+  background: #022418;
+  cursor: pointer;
+}
+
+.cadastrar:active{
+  background: #1bc992;
+  box-shadow: inset 2px 2px 0 #333;
+}
+
+p{
+  text-align: center;
+}
+
+span{
+  font-weight: bold;
+  color: blue;
+  cursor: pointer;
+}
+
+.virar{
+  transform: rotateY(180deg);
+  perspective: 500px;
+}
+
