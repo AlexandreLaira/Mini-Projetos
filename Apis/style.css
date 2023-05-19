@@ -1,5 +1,136 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.fundo{
+  height: 100vh;
+  background-image: url('./img/estrada.webp') ;
+  background-position: right;
+  background-size: cover;
+  filter: blur(3px);
+  position: relative;
+
+}
+form{
+  top: 0;
+  left: 5%;
+  margin-top: 50px;
+  background-color: rgba(54, 54, 54, 0.8);
+  width: 500px;
+  height: 300px;
+  border-radius: 12px;
+  position: absolute;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+h1{
+  color: white;
+  font-family: 'Trebuchet MS',sans-serif;
+}
+form label{
+  display: flex;
+  font-family: 'Trebuchet MS',Arial, sans-serif;
+  color: white;
+}
+#cep{
+  border: none;
+  height: 1.4rem;
+  padding-left: 5px;
+  border-radius: 4px;
+  margin-right:40%;
+}
+#cep:focus{
+  outline: 0;
+  border: 1px solid rgb(134, 51, 56);;
+}
+.botao{
+  place-self: end;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 2px 1px 7px #000;
+}
+.botao:hover{
+  background-color: rgb(134, 51, 56);
+  color: white;
+}
+form span{
+  color: white;
+  display: block;
+  position: relative;
+  font: bold 1rem sans-serif;
+}
+form span::after{
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+}
+.resultado{
+  font-weight: 400;
+  font: 1rem sans-serif;
+  color: #fff;
+}
+
+/* ------------ CONTAINER BITCOIN ----------------*/
+
+.container-bit{
+  position: absolute;
+  right: 5%;
+  top: 50px;
+  background: rgba(54, 54, 54, 0.8);
+  padding: 50px;
+  border-radius: 12px;
+}
 
 .container-preco{
-  display: flex;
-  gap: 12px;
+  /* display: flex; */
+  text-align: center;
 }
+p{
+  color: white;
+  font-size: 2em;
+}
+
+.espaco{
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+/* ----------------- CONTAINER NORRIS -----------------*/
+
+.container-chuck{
+  position: absolute;
+  left: 5%;
+  top: 450px;
+  background: rgba(54, 54, 54, 0.8);
+  padding: 50px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 90%;
+}
+
+span{
+  color: #fff;
+  font-size: 1.2em;
+  font-family: 'Trebuchet MS',Arial, sans-serif;
+}
+
+.chuck{
+  place-self: start;
+}
+

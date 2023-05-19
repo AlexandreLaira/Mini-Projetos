@@ -28,10 +28,7 @@ function initBitcoin(){
 const api = 'https://blockchain.info/ticker';
 const preco = document.querySelector('.container-preco');
 const p = document.createElement('p');
-const span = document.createElement('span');
-span.classList.add('espaco');
 p.classList.add('espaco');
-preco.appendChild(span);
 preco.appendChild(p);
 
 function pegaPreco(){
@@ -40,9 +37,7 @@ function pegaPreco(){
       return response.json();
     })
     .then(body => {
-      span.innerText = 'R$ ' + body.BRL.last.toLocaleString('pt-br');
       p.innerText = 'R$ ' + body.BRL.buy.toLocaleString('pt-br');
-
     });
   }
   pegaPreco();
