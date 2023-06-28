@@ -7,7 +7,8 @@ function initBuscaEndereco(){
   div.classList.add('resultado');
 
 
-  function buscaCep(){
+  function buscaCep(event){
+    event.preventDefault();
     const cep = document.getElementById('cep');
     cepValue = cep.value;
     fetch(`https://viacep.com.br/ws/${cepValue}/json/`)
@@ -70,9 +71,9 @@ function initPiadas(){
   const pai = document.querySelector('.container-chuck');
   pai.appendChild(p);
   
-  const botao = document.querySelector('.chuck');
+  const botao_joke = document.querySelector('.chuck');
 
-  botao.addEventListener('click', showJoke);
+  botao_joke.addEventListener('click', showJoke);
 
 function showJoke(){
   fetch(url)

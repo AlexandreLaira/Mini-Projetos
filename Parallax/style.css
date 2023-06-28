@@ -9,8 +9,7 @@
 
 body{
   background: #999999;
-  min-height: 100vh;
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 header{
@@ -65,11 +64,16 @@ header{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   object-fit: cover;
   height: 100%;
   pointer-events: none;
 }
+
+#folhas,
+#smoke{
+  width: 100%;
+}
+
 
 #dragon{
   max-width: 800px;
@@ -77,6 +81,7 @@ header{
   right: 0%;
   margin-left: 100%;
   transform: translate(-100%);
+  object-fit: contain;
 }
 
 .sec{
