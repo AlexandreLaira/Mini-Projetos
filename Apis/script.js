@@ -24,7 +24,6 @@ function initBuscaEndereco(){
     ;
   }
 }
-initBuscaEndereco();
 
 
 /* --------------- BUSCA O PRECO DO BITCOIN ------------- */
@@ -54,7 +53,6 @@ function pegaPreco(){
   setInterval(pegaPreco, 30000);
 
 }
-initBitcoin();
 
 
 /* ------------------ PIADAS CHUCK NORRIS ------------- */
@@ -90,5 +88,8 @@ function showJoke(){
 }
 
 }
+
+initBuscaEndereco();
+initBitcoin();
 initPiadas();
   
