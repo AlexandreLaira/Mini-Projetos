@@ -2,65 +2,73 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-.fundo{
-  height: 100vh;
-  background-image: url('./img/estrada.webp') ;
-  background-position: right;
-  background-size: cover;
-  filter: blur(3px);
-  position: relative;
+  font-family: 'Trebuchet MS',Arial, sans-serif;
 
 }
-form{
-  top: 0;
-  left: 5%;
+
+main{
+  background-image: url('./img/estrada.webp');
+  background-size: cover;
+  background-position: bottom;
+  height: 100vh;
+}
+
+.containerGeral{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.container{
   margin-top: 50px;
   background-color: rgba(54, 54, 54, 0.8);
+  backdrop-filter: blur(2px);
   width: 500px;
   height: 300px;
   border-radius: 12px;
-  position: absolute;
   padding: 35px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
 }
-h1{
+
+h3{
   color: white;
-  font-family: 'Trebuchet MS',sans-serif;
+  padding: 1rem 0;
+  text-align: center;
 }
 form label{
   display: flex;
-  font-family: 'Trebuchet MS',Arial, sans-serif;
   color: white;
 }
+
 #cep{
   border: none;
-  height: 1.4rem;
-  padding-left: 5px;
+  height: 1.8rem;
   border-radius: 4px;
-  margin-right:40%;
+  display: block;
 }
 #cep:focus{
   outline: 0;
   border: 1px solid rgb(134, 51, 56);;
 }
 .botao{
-  place-self: end;
-  padding: 10px;
-  background-color: #fff;
+  padding: 10px 15px;
+  background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255, 0.6));
   text-align: center;
   border-radius: 4px;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 2px 1px 7px #000;
+  transition: all 200ms;
+  box-shadow: 1px 1px 2px #000;
+  margin: 25px 0;
+  display: block;
 }
 .botao:hover{
-  background-color: rgb(134, 51, 56);
-  color: white;
+  font-weight: bold;
+  color: green;
 }
 form span{
   color: white;
@@ -78,6 +86,7 @@ form span::after{
   left: 0px;
 }
 .resultado{
+  padding: 1rem 0;
   font-weight: 400;
   font: 1rem sans-serif;
   color: #fff;
@@ -86,9 +95,10 @@ form span::after{
 /* ------------ CONTAINER BITCOIN ----------------*/
 
 .container-bit{
-  position: absolute;
   right: 5%;
   top: 50px;
+  width: 500px;
+  height: 300px;
   background: rgba(54, 54, 54, 0.8);
   padding: 50px;
   border-radius: 12px;
@@ -111,26 +121,38 @@ p{
 
 /* ----------------- CONTAINER NORRIS -----------------*/
 
-.container-chuck{
-  position: absolute;
-  left: 5%;
-  top: 450px;
-  background: rgba(54, 54, 54, 0.8);
-  padding: 50px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 90%;
-}
 
 span{
   color: #fff;
   font-size: 1.2em;
-  font-family: 'Trebuchet MS',Arial, sans-serif;
 }
 
-.chuck{
-  place-self: start;
+.piadaChuck{
+  display: block;
+  padding: 1rem 0;
+}
+
+
+
+
+
+/* ----------------- MEDIA SCREEN -----------------------*/
+
+@media screen and (width < 768px) {
+  main{
+    height: 100%;
+  }
+
+  .containerGeral{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    }
+
+  .container{
+    margin-top: 2%;
+    width: 95%;
+    height: 80%;
+  }
 }
 

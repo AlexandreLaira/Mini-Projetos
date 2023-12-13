@@ -9,31 +9,32 @@
   <title>Busca CEP</title>
 </head>
 <body>
-  <div class="container-cep">
-    <div class="fundo"></div>
-    <form id="formulario" method="get" action="#">
-      <h1>Busca Endereço</h1>
-      <div class="container-cep">
-        <label for="cep">Digite um cep</label>
-        <input id="cep" type="text" placeholder="CEP">
-        <input class="botao endereco" type="submit" value="Buscar" >
+  <main>
+    <div class="containerGeral">
+      <div class="container cep">
+        <form id="formulario" method="get" action="#">
+          <h3 class="titulo">Busca Endereço</h3>
+          <div class="container-cep">
+            <label for="cep">Digite um cep</label>
+            <input id="cep" type="text" placeholder="CEP">
+            <input class="botao endereco" type="submit" value="Buscar" >
+          </div>
+          <span>Endereço</span>
+        </form>
       </div>
-      <span>Endereço</span>
-    </form>
-  </div>
 
-  <div class="container-bit">
-    <h1>Preço do Bitcoin</h1>
-    <div class="container-preco">
-      <!-- <p>Preço: </p> -->
+      <div class="container bit">
+        <h3>Preço do Bitcoin</h3>
+        <div class="container-preco">
+          <!-- <p>Preço: </p> -->
+        </div>
+      </div>
+      
+      <div class="container chuck">
+        <h3>Piadas Chuck Norris</h3>
+        <input class="botao chuck" type="submit" value="Proxima" data-botao>
+      </div>
     </div>
-  </div>
-  
-  <div class="container-chuck">
-    <h1>Piadas Chuck Norris</h2>
-    <input class="botao chuck" type="submit" value="Proxima">
-  </div>
-
-
+  </main>
 </body>
 </html>

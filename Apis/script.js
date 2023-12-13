@@ -7,17 +7,21 @@ function initBuscaEndereco(){
   div.classList.add('resultado');
 
 
-  function buscaCep(){
+  async function buscaCep(){
     const cep = document.getElementById('cep');
     cepValue = cep.value;
-    fetch(`https://viacep.com.br/ws/${cepValue}/json/`)
-
-    .then(response => {
-      return response.json();
-    }).then(response => {
+    const busca = await fetch(`https://viacep.com.br/ws/${cepValue}/json/`)
+    const response = await busca.json();
+    
+    if(response.localidade !== undefined){
       div.innerText = `${response.logradouro}, ${response.bairro} - ${response.localidade}, ${response.uf}`;
       span.appendChild(div);
-    });
+    }else{
+      div.innerText = 'Cep não encontrado.';
+      span.appendChild(div);
+    }
+
+    ;
   }
 }
 initBuscaEndereco();
@@ -62,15 +66,16 @@ function initPiadas(){
     return response.json();
   })
   .then(body=>{
-    p.innerText = body.value;
+    span.innerText = body.value;
   });
 
   
-  const p = document.createElement('span');
-  const pai = document.querySelector('.container-chuck');
-  pai.appendChild(p);
-  
-  const botao = document.querySelector('.chuck');
+  const span = document.createElement('span');
+  const botao = document.querySelector('[data-botao]');
+  const pai = document.querySelector('.chuck')
+  .insertBefore(span, botao);
+
+  span.className.add = 'piadaChuck';
 
   botao.addEventListener('click', showJoke);
 
@@ -80,7 +85,7 @@ function showJoke(){
       return response.json();
     })
     .then(body=>{
-      p.innerText = body.value;
+      span.innerText = body.value;
     });
 }
 
