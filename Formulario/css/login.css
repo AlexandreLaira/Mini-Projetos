@@ -1,0 +1,177 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 1rem 'Poppins', sans-serif;
+}
+
+main{
+  background: #35554a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cadastro{
+  background: #ffffff;
+  max-width: 600px;
+  width: 400px;
+  border-radius: 8px;
+  padding: 50px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 1000ms;
+}
+
+.login{
+  position: absolute;
+  background: #ffffff;
+  max-width: 600px;
+  width: 400px;
+  border-radius: 8px;
+  padding: 50px;
+  transform-style: preserve-3d;
+  transition: transform 1000ms;
+  backface-visibility: hidden;
+}
+
+.titulo-cadastro{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.itens-form{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itens-form label{
+  width: 100%;
+  align-items: left;
+}
+
+input{
+  margin-bottom: 22px;
+  border: none;
+  border-bottom: 1px solid #35554a;
+  font-size: 0.9rem;
+  width: 100%;
+  padding: 3px;
+}
+
+input::placeholder{
+  opacity: 0.3;
+  font-size: 0.8rem;
+}
+
+#senha-conf{
+  margin-bottom: 35px;
+}
+
+.botaoSubmit{
+  padding: 12px;
+  border-bottom: none;
+  background: #35554a;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 200ms;
+}
+
+.botaoSubmit:hover{
+  background: #022418;
+  cursor: pointer;
+}
+
+.botaoSubmit:active{
+  background: #1bc992;
+  box-shadow: inset 2px 2px 0 #333;
+}
+
+p{
+  text-align: center;
+}
+
+.alterar{
+  font-weight: bold;
+  color: blue;
+  cursor: pointer;
+}
+
+.botaoLogin{
+  border: none;
+  background-color: transparent;
+}
+
+.virar{
+  transform: rotateY(180deg);
+  perspective: 500px;
+}
+
+.desvirar{
+  transform: rotateY(180deg);
+  perspective: 500px;
+}
+
+.erro{
+  color: red;
+  font-size: 12px;
+  position: relative;
+  top: -20px;
+  display: block;
+}
+
+
+.modal{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  position: absolute;
+  background-color: #35554a;
+  color: white;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal h4{
+  font-size: 2rem;
+}
+
+.modal p{
+  font-size: 1.5rem;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.modal button{
+  padding: .4rem 1rem;
+  display: flex;
+  cursor: pointer;
+}
+
+.active{
+  display: flex;
+}
+
+.back{
+  opacity: .3;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+

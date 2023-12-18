@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="./css/cadastro.css">
+</head>
+
+<body>
+  <main class="formulario">
+    <section class="cadastro" id="formCadastro">
+      <h2 class="titulo-cadastro">Cadastro</h2>
+      <form class="formCadastro" method="POST">
+
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          name="email" 
+          class="email" 
+          required 
+          placeholder="alberteinstein@fisico.com"
+          onchange="validateEmail()"
+        >
+        <span id="erroEmail" class="erro"></span>
+
+        <label for="nome">Nome</label>
+        <input 
+          type="text" 
+          id="nome" 
+          required 
+          placeholder="Albert"
+        >
+        <span id="erroNome" class="erro"></span>
+
+        <label for="sobrenome">Sobrenome</label>
+        <input 
+          type="text" 
+          id="sobrenome" 
+          required 
+          placeholder="Einstein"
+        >
+        <span id="erroSobrenome" class="erro"></span>
+
+        <label for="senha">Senha</label>
+        <input 
+          type="password" 
+          class="senha" 
+          id="senha" 
+          required
+        >
+        <span id="erroSenha" class="erro"></span>
+
+        <label for="senha-conf">Confirmacao de Senha</label>
+        <input 
+          type="password" 
+          id="senha-conf" 
+          required
+        >
+        <span id="erroConfSenha" class="erro"></span>
+
+        <input 
+          type="submit" 
+          value="Cadastrar" 
+          class="cadastrar"
+          onclick='cadastrar(); return false' 
+        >
+      </form>
+      <p>Já possui cadastro? <a href="login.html" class="alterar botaoLogin">LOGIN</a></p>
+    </section>
+
+  </main>
+
+  <section id="modal" class="modal">
+    <h4>Cadastro Efetuado com sucesso!</h4>
+    <p>Já pode realizar seu login.</p>
+    <button class="botaoFecharModal">Fechar</button>
+  </section>
+
+  <script src="js/script.js"></script>
+  <script src="js/cadastro.js"></script>
+</body>
+</html>

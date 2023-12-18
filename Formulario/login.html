@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/login.css">
+  <title>Login</title>
+</head>
+
+<body>
+  <main data-formulario>
+    <section class="login" >
+      <h2 class="titulo-cadastro">Login</h2>
+      <form class="itens-form" id="formLogin" method="POST">
+        
+        <label for="email">Email</label>
+        <input type="email" name="email" class="emailLogin" id="emailLogin" required>
+        <span id="erroEmail" class="erro"></span>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" class="senhaLogin" required>
+        <span id="erroSenha" class="erro"></span>
+
+        <input 
+          id="submitLogin"
+          type="submit" 
+          value="Login"
+          class="botaoSubmit"
+          onclick="login(); return false"
+        >
+      </form>
+
+      <p>Não possui cadastro? <a class="alterar" href="./cadastro.html">CADASTRAR</a></p>
+      </section>
+
+
+    </main>
+    <section id="modal" class="modal">
+      <h4>Muito obrigado!</h4>
+      <button class="botaoFecharModal">Fechar</button>
+    </section>
+
+    <script src="js/script.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
