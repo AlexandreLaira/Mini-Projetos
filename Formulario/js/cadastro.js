@@ -5,7 +5,7 @@ function validateEmail(email) {
   erro.classList.add('erro');
 
   const regexEmail = new RegExp(
-    /^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/
+    /^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\.[a-zA-Z]+/
   );
 
 
@@ -90,6 +90,17 @@ function cadastrar(){
     validateSobrenome(sobrenome) 
   ){
     function handleClick(){
+
+      const usuario = {
+        nome: nome.value,
+        sobrenome: sobrenome.value,
+        email: email.value,
+        senha: senha.value,
+      }
+
+
+      localStorage.setItem('usuario', JSON.stringify(usuario));
+
       modal.classList.remove('modal');
       main.classList.remove('back');
       location.href = '/login.html';
@@ -105,3 +116,12 @@ function cadastrar(){
     botaoFecharModal.addEventListener('click', handleClick)
   }
 }
+
+function hrefLogin(){
+  const cadastroForm = document.querySelector('.cadastro')
+  cadastroForm.classList.toggle('virar');
+  setInterval(()=>{
+    window.location.href = 'login.html';
+  }, 300);
+}
+

@@ -1,14 +1,12 @@
 
-
-
   const email = document.getElementById('emailLogin');
   const senha = document.querySelector('.senhaLogin');
-  const submitLogin = document.getElementById('submitLogin');
+  // const submitLogin = document.getElementById('submitLogin');
   
   function validateEmailLogin(email) {
     const erro = document.querySelector('.erro');
     const regexEmail = new RegExp(
-      /^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/
+      /^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\.[a-zA-Z]+/
       );
       
       if(email.value === ''){
@@ -34,29 +32,44 @@
     
     email.addEventListener('focusout', ()=>{validateEmailLogin(email)});
     senha.addEventListener('focusout', ()=>{validateSenhaLogin(senha)});
+
+    
   function login(){
+    const user = JSON.parse(localStorage.getItem('usuario'));
+    const email = document.getElementById('emailLogin');
+    const senha = document.querySelector('.senhaLogin');
+    const modal = document.getElementById('modal');
+    const main = document.querySelector('[data-formulario]');
+    const botaoFecharModal = document.querySelector('.botaoFecharModal');
+    const modalh4 = document.querySelector('.modal h4');
 
+    function handleClick(){
+      modal.classList.remove('active');
+      main.classList.remove('back');
+    }
+    
       if(
-        validateEmailLogin(email) &&
-        validateSenhaLogin(senha) 
-      ){
-
-        function handleClick(){
-          modal.classList.remove('modal');
-          main.classList.remove('back');
+        user &&
+        user.email === email.value &&
+        user.senha === senha.value
+        ){
           location.href = '/index.html'; 
         }
-
-        const modal = document.getElementById('modal');
-        const main = document.querySelector('[data-formulario]');
-        const botaoFecharModal = document.querySelector('.botaoFecharModal')
-        
-        modal.classList.add('active');
-        main.classList.add('back');
-        
-        botaoFecharModal.addEventListener('click', handleClick)
+        else{
+          modalh4.innerText = 'Usuario ou senha incorreto.'
+          modal.classList.add('active');
+          main.classList.add('back');
+          botaoFecharModal.addEventListener('click', handleClick);
       }
-        
     }
+
+function hrefCadastro(){
+  const loginForm = document.querySelector('.login')
+  loginForm.classList.toggle('virar')
+  setInterval(()=>{
+    window.location.href = '/cadastro.html'
+  }, 300)
+}
+
 
   
