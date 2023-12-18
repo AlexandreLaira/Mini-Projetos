@@ -19,8 +19,7 @@ main{
 
 .cadastro{
   background: #ffffff;
-  max-width: 600px;
-  width: 400px;
+  width: clamp(17rem, 80vw, 30rem);
   border-radius: 8px;
   padding: 50px;
   backface-visibility: hidden;
@@ -137,7 +136,7 @@ p{
   display: none;
   flex-direction: column;
   align-items: center;
-  width: 600px;
+  width: clamp(10rem, 95vw, 40rem);
   height: 300px;
   position: absolute;
   background-color: #35554a;
@@ -151,11 +150,12 @@ p{
 }
 
 .modal h4{
-  font-size: 2rem;
+  font-size: clamp(1rem, 6vw, 2rem);
+  text-align: center;
 }
 
 .modal p{
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 5vw, 1.8rem);
   padding: 1.2rem;
   margin-bottom: 2rem;
 }
