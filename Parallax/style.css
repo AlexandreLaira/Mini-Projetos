@@ -10,7 +10,7 @@
 body{
   background: #999999;
   min-height: 100vh;
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 header{
@@ -79,6 +79,10 @@ header{
   transform: translate(-100%);
 }
 
+#folhas{
+  z-index: -1;
+}
+
 .sec{
   position: relative;
   background-color: #fff;
@@ -96,4 +100,9 @@ header{
   color: #003329;
   font-weight: 300;
   margin: 10px;
+  width: 75ch;
+}
+
+a{
+  text-decoration: none;
 }
